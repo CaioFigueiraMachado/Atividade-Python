@@ -1,10 +1,10 @@
-# Função para criar um personagem com input
+#Caio Figueira Machado 2BDEV
 def criar_personagem():
     nome = input("Digite o nome do personagem: ")
     idade = input("Digite a idade do personagem: ")
     tipo = input("Digite o tipo do personagem (ex: guerreiro, mago, arqueiro): ")
     
-    # Atributos base por tipo (você pode ajustar como quiser)
+   
     if tipo.lower() == 'guerreiro':
         vida = 120
         ataque = 18
@@ -32,7 +32,6 @@ def criar_personagem():
         'defesa': defesa
     }
 
-# Função para aplicar ataque
 def atacar(atacante, defensor):
     dano = atacante['ataque'] - defensor['defesa']
     if dano < 0:
@@ -40,7 +39,6 @@ def atacar(atacante, defensor):
     defensor['vida'] -= dano
     print(f"\n{atacante['nome']} atacou {defensor['nome']} causando {dano} de dano!")
 
-# Função para exibir status
 def exibir_status(personagem):
     print(f"\nStatus de {personagem['nome']}:")
     print(f"  Idade: {personagem['idade']}")
@@ -50,7 +48,7 @@ def exibir_status(personagem):
     print(f"  Defesa: {personagem['defesa']}")
     print("-" * 30)
 
-# Código principal
+
 print("Criação do Personagem 1")
 personagem1 = criar_personagem()
 
